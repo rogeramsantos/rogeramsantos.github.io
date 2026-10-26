@@ -1,4 +1,4 @@
-# Rogerio A. M. Santos — Portfolio
+# Portfolio UX/UI — Rogerio A. M. Santos
 
 Static site (HTML, CSS, a little JavaScript). Design source: Figma file "Portfolio – Rogerio A. M. Santos", section v3.
 
