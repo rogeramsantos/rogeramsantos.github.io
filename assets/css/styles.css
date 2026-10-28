@@ -479,7 +479,7 @@ main { margin-bottom: var(--space-section); }
   content: "";
   width: 2px;
   height: 16px;
-  background: var(--color-divider);
+  background: transparent; /* Figma v7: only the active section shows its line */
   transition: background 0.2s ease;
 }
 
