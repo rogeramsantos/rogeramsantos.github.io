@@ -707,6 +707,35 @@ main { margin-bottom: var(--space-section); }
 .more a:hover .t { color: var(--color-accent); }
 .more a:hover .arrow { transform: translate(3px, -3px); }
 
+/* Figma v8: Feature Map, cards, Experiences, Branding, Feedback */
+.fmap { display: grid; gap: 24px; padding: 34px; }
+.fmap-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.fmap-moscow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.fmap-box { display: grid; gap: 8px; align-content: start; padding: 20px; border-radius: 10px; background: var(--color-bg); }
+.fmap-box ul { display: grid; gap: 8px; padding: 0; list-style: none; font-size: 16px; line-height: 21px; }
+.fmap-tab { font-size: 17px; line-height: 21px; font-weight: 700; color: var(--color-accent); }
+
+.cards { display: grid; gap: 34px; align-items: start; }
+.cards--2 { grid-template-columns: 521px 521px; }
+.cards--3 { grid-template-columns: repeat(3, 336px); }
+.cards .card-body { gap: 12px; }
+
+.flows { display: grid; grid-template-columns: 521px 521px; gap: 34px; align-items: start; }
+.flow { display: grid; gap: 12px; align-content: start; margin: 0; padding: 28px; border-radius: 14px; background: #f6f5f5; }
+.flow h3,
+.flow figcaption { font-size: 17px; line-height: 21px; font-weight: 700; }
+.flow p { font-size: 16px; line-height: 21px; }
+.flow-media { gap: 16px; height: 360px; padding: 16px; }
+.flow-media img { width: 151px; height: 328px; object-fit: cover; object-position: top; border-radius: 10px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
+.brand { gap: 16px; }
+.brand-img { display: flex; align-items: center; justify-content: center; height: 300px; border-radius: 10px; background: var(--color-bg); overflow: hidden; }
+.brand-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.feedback { display: grid; grid-template-columns: 390px 652px; gap: 34px; align-items: start; }
+.fb-col { display: grid; gap: 16px; align-content: start; font-size: 16px; line-height: 21px; }
+.fb-col ul { display: grid; gap: 16px; padding: 0; list-style: none; }
+.fb-strong { font-size: 17px; font-weight: 700; }
+
 /* TL;DR keeps the hero and summary only */
 .cs.is-tldr .cs-section,
 .cs.is-tldr .cs-stops li:nth-child(n + 3) { display: none; }
