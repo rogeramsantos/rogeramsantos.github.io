@@ -45,3 +45,32 @@ if (!reduceMotion) {
   // Coming back with the browser's Back button restores the page from cache.
   window.addEventListener("pageshow", () => document.body.classList.remove("is-leaving"));
 }
+
+// Case study: Full / TL;DR toggle and the side index that follows the reader.
+const caseStudy = document.querySelector(".cs");
+
+if (caseStudy) {
+  const buttons = caseStudy.querySelectorAll(".cs-toggle button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+      caseStudy.classList.toggle("is-tldr", button.dataset.mode === "tldr");
+    });
+  });
+
+  const stops = [...caseStudy.querySelectorAll(".cs-stops a")];
+  const targets = stops.map((a) => document.querySelector(a.hash)).filter(Boolean);
+
+  if ("IntersectionObserver" in window && targets.length) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          stops.forEach((a) => a.classList.toggle("is-active", a.hash === `#${entry.target.id}`));
+        });
+      },
+      { rootMargin: "-30% 0px -60% 0px" }
+    );
+    targets.forEach((t) => spy.observe(t));
+  }
+}
