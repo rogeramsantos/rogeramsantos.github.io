@@ -27,6 +27,8 @@
   --space-section: 64px;
   --tile-pad: 32px;
   --nav-gap: 24px;
+  --header-h: 108px;
+  --footer-h: 62px;
 
   /* Type */
   --font: "Figtree", "Proxima Nova", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -42,6 +44,7 @@ html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
+  padding-bottom: var(--footer-h);
   background: var(--color-bg);
   color: var(--color-text);
   font: 500 14px/21px var(--font);
@@ -114,11 +117,16 @@ a { color: inherit; }
 
 /* ---------- Header ---------- */
 
+/* Header and footer stay put while scrolling (Figma "website v6") */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--header-top) var(--page-x) 0;
+  padding: var(--header-top) var(--page-x) 20px;
+  background: var(--color-bg);
 }
 
 .logo {
@@ -298,11 +306,18 @@ a.tile:focus-visible .tile-cat {
   justify-content: space-between;
   gap: 12px 24px;
   flex-wrap: wrap;
-  margin-top: var(--space-section);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
   padding: 20px var(--page-x);
   border-top: 1px solid var(--color-divider);
+  background: var(--color-bg);
   color: var(--color-text-subtle);
 }
+
+main { margin-bottom: var(--space-section); }
 
 .footer-meta,
 .footer-links {
@@ -437,7 +452,7 @@ a.tile:focus-visible .tile-cat {
 
 .cs-index {
   position: sticky;
-  top: 32px;
+  top: calc(var(--header-h) + 24px);
   align-self: start;
   display: grid;
   gap: 28px;
@@ -573,7 +588,9 @@ a.tile:focus-visible .tile-cat {
 .stat span { font-size: 16px; line-height: 21px; color: var(--color-text-muted); }
 
 /* Numbered sections */
-.cs-section { display: grid; gap: 40px; scroll-margin-top: 32px; }
+.cs-section { display: grid; gap: 40px; scroll-margin-top: calc(var(--header-h) + 24px); }
+.cs-hero,
+.cs-summary { scroll-margin-top: calc(var(--header-h) + 24px); }
 .cs-head { display: grid; gap: 14px; max-width: 724px; }
 .cs-kicker { display: flex; align-items: center; gap: 24px; }
 .cs-num { font-size: 80px; line-height: 82px; font-weight: 700; color: #ded2d7; }
@@ -767,7 +784,8 @@ a.tile:focus-visible .tile-cat {
   .more .t { font-size: 22px; line-height: 27px; }
   .more a { grid-template-columns: 48px 1fr auto; }
 
-  .site-footer { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .footer-meta { flex-direction: column; align-items: flex-start; }
-  .footer-meta li + li { margin-left: 0; padding-left: 0; border-left: 0; }
+  /* Phones: one compact bar, name + profile links */
+  :root { --header-h: 80px; --footer-h: 58px; }
+  .site-footer { flex-wrap: nowrap; padding: 16px var(--page-x); }
+  .footer-meta li + li { display: none; }
 }
