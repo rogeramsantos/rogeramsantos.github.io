@@ -15,9 +15,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="logo" href="../" aria-label="Roger A. M. Santos — home">
-      <svg viewBox="0 0 100 120" aria-hidden="true"><path d="M24 104V24h34c18 0 26 10 26 22s-8 22-26 22H24m28 0 28 36" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+    <a class="logo" href="../" aria-label="Roger A. M. Santos — home"><img src="../assets/images/logo.svg" width="44" height="52" alt=""></a>
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="../" aria-current="page">work</a></li>
@@ -49,12 +47,11 @@
 
     <article class="cs-content">
       <header class="cs-hero" id="overview">
-        <h1>fashion weAk</h1>
-        <p class="cs-subtitle">Helping people with a minimal wardrobe wear colour with confidence</p>
+        <div class="cs-title"><h1>fashion weAk</h1><p class="cs-subtitle">Helping people with a minimal wardrobe wear colour with confidence</p></div>
         <p class="cs-cats">ux research <span class="accent">/</span> product design <span class="accent">/</span> mobile app</p>
         <p class="cs-text">fashion weAk is a wardrobe app for people who are a bit “weak at fashion”. In a two-week solo project, I researched why people with small wardrobes keep reaching for black and navy, then designed an app that <mark>finds your colour palette and builds outfits from clothes you already own</mark>.</p>
         <div class="cs-meta"><dl><dt>role <span class="accent">↓</span></dt><dd>UX/UI Designer (solo)</dd></dl><dl><dt>timeline <span class="accent">↓</span></dt><dd>Oct 2026 · [2] weeks</dd></dl><dl><dt>scope <span class="accent">↓</span></dt><dd>Research, UX/UI, Prototyping</dd></dl><dl><dt>context <span class="accent">↓</span></dt><dd>Ironhack UX/UI bootcamp</dd></dl><span class="chip chip--panel">[5] min read</span></div>
-        <div class="board"><div class="screens"><img src="../assets/images/fashion-weak/home.png" alt="Home screen: “Good morning, Jamie!”, Berlin weather and today’s clothes" loading="lazy"><img src="../assets/images/fashion-weak/palette.png" alt="Profile: my colour palette" loading="lazy"><img src="../assets/images/fashion-weak/outfits-summer.png" alt="Outfits filtered by summer, with Wada colour combinations" loading="lazy"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Wardrobe filtered by T-shirts" loading="lazy"></div></div>
+        <div class="cs-media cs-media--hero"><div class="screens" style="--h:516px"><img src="../assets/images/fashion-weak/home.png" alt="Home: “Good morning, Jamie!”, Berlin weather and today’s clothes"><img src="../assets/images/fashion-weak/palette.png" alt="Profile: my colour palette"><img src="../assets/images/fashion-weak/outfits-summer.png" alt="Outfits filtered by summer, with Wada colour combinations"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Wardrobe filtered by T-shirts"></div></div>
       </header>
 
       <section class="cs-summary reveal" id="challenge" aria-label="Summary">
@@ -92,10 +89,11 @@
         <div class="research">
           <div class="board quotes">
             <span class="chip chip--white">What they said</span>
-            <ul><li>“With black on black you can’t go wrong.” <span>— P2</span></li><li>“Even though the fit was okay, the color was off, so I passed.” <span>— P3</span></li><li>“I try to basically minimize the choice a lot.” <span>— P1</span></li><li>“I don’t want to attract much attention… but I also don’t want to look bad.” <span>— P1</span></li><li>“It’s just frustrating when there’s a clash of opinions.” <span>— P3</span></li></ul>
+            <ul><li>“With black on black you can’t go wrong.” — P2</li><li>“Even though the fit was okay, the color was off, so I passed.” — P3</li><li>“I try to basically minimize the choice a lot.” — P1</li><li>“I don’t want to attract much attention… but I also don’t want to look bad.” — P1</li><li>“It’s just frustrating when there’s a clash of opinions.” — P3</li></ul>
           </div>
           <div class="board synthesis">
-            <div class="synthesis-chips"><span class="chip">Pain points</span><span class="chip chip--soft">Opportunities</span></div>
+            <span class="chip chip--pain">Pain points</span>
+            <span class="chip chip--soft chip--opp">Opportunities</span>
             <div class="themes"><div class="theme"><small>colour</small><strong>Dark feels safe</strong><p>People don’t avoid colour, they can’t judge it until after buying.</p></div><div class="theme"><small>minimalism</small><strong>Fewer choices, on purpose</strong><p>Two pairs of trousers, the same shirt in a few colours.</p></div><div class="theme"><small>others’ opinions</small><strong>Feedback arrives too late</strong><p>A sister or partner says “no” right before leaving.</p></div><div class="theme"><small>context</small><strong>The occasion decides</strong><p>Venue, weather and comfort matter more than trends.</p></div></div>
           </div>
         </div>
@@ -107,9 +105,12 @@
           <h2 id="audit-title">Looking at existing wardrobe apps</h2>
           <p class="cs-text">I compared Acloset and ALTA. Both catalogue clothes well, but they lean on shopping, AI suggestions and endless options: the opposite of what a minimalist wants.</p>
         </header>
-        <div class="board">
-          <div class="screens"><img src="../assets/images/fashion-weak/competitor-1.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)" loading="lazy"><img src="../assets/images/fashion-weak/competitor-2.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)" loading="lazy"><img src="../assets/images/fashion-weak/competitor-3.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)" loading="lazy"><img src="../assets/images/fashion-weak/competitor-4.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)" loading="lazy"></div>
-          <div class="notes"><div class="note"><small>Notes</small><strong>Acloset</strong><ul><li>• [What it does well]</li><li>• [What I left out]</li></ul></div><div class="note"><small>Notes</small><strong>ALTA</strong><ul><li>• [What it does well]</li><li>• [What I left out]</li></ul></div><div class="note"><small>Notes</small><strong>Shopping</strong><ul><li>• Store suggestions push buying, not wearing</li></ul></div><div class="note"><small>Notes</small><strong>Kept out (MoSCoW)</strong><ul><li>• No daily notifications</li><li>• No endless seasonal palettes</li></ul></div></div>
+        <div class="board audit">
+          <div class="cs-media audit-media"><div class="screens" style="--h:407px"><img src="../assets/images/fashion-weak/competitor-1.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)"><img src="../assets/images/fashion-weak/competitor-2.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)"><img src="../assets/images/fashion-weak/competitor-3.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)"><img src="../assets/images/fashion-weak/competitor-4.png" alt="Screen from a competitor wardrobe app (Acloset or ALTA)"></div></div>
+          <div class="note note--1"><small>Notes</small><strong>Acloset</strong><ul><li>• [What it does well]</li><li>• [What I left out]</li></ul></div>
+          <div class="note note--2"><small>Notes</small><strong>ALTA</strong><ul><li>• [What it does well]</li><li>• [What I left out]</li></ul></div>
+          <div class="note note--3"><small>Notes</small><strong>Shopping</strong><ul><li>• Store suggestions push buying, not wearing</li></ul></div>
+          <div class="note note--4"><small>Notes</small><strong>Kept out (MoSCoW)</strong><ul><li>• No daily notifications</li><li>• No endless seasonal palettes</li></ul></div>
         </div>
       </section>
 
@@ -120,9 +121,12 @@
           <p class="cs-text">Crazy 8s and a Worst Idea round, MoSCoW to cut the scope, an information architecture with four tabs, then low-fi (19.10), a “dumb” hi-fi (21.10) and the final hi-fi.</p>
         </header>
         <div class="board steps">
-          <figure><div class="screens"><img src="../assets/images/fashion-weak/lowfi-home.jpg" alt="Low-fi sketch of the home screen" loading="lazy"></div><figcaption class="chip">Low-fi</figcaption></figure>
-          <figure><div class="screens"><img src="../assets/images/fashion-weak/dumb-wardrobe.png" alt="“Dumb” hi-fi wardrobe screen" loading="lazy"><img src="../assets/images/fashion-weak/dumb-outfit.png" alt="“Dumb” hi-fi outfit screen" loading="lazy"></div><figcaption class="chip">“Dumb” hi-fi</figcaption></figure>
-          <figure><div class="screens"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Hi-fi wardrobe screen" loading="lazy"></div><figcaption class="chip chip--soft">Hi-fi</figcaption></figure>
+          <div class="cs-media step-media step-media--1"><div class="screens" style="--h:315px"><img src="../assets/images/fashion-weak/lowfi-home.jpg" alt="Low-fi sketch of the home screen"></div></div>
+          <span class="chip step-chip step-chip--1">Low-fi</span>
+          <div class="cs-media step-media step-media--2"><div class="screens" style="--h:328px"><img src="../assets/images/fashion-weak/dumb-wardrobe.png" alt="“Dumb” hi-fi wardrobe screen"><img src="../assets/images/fashion-weak/dumb-outfit.png" alt="“Dumb” hi-fi outfit screen"></div></div>
+          <span class="chip step-chip step-chip--2">“Dumb” hi-fi</span>
+          <div class="cs-media step-media step-media--3"><div class="screens" style="--h:328px"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Hi-fi wardrobe screen"></div></div>
+          <span class="chip chip--soft step-chip step-chip--3">Hi-fi</span>
         </div>
       </section>
 
@@ -133,8 +137,12 @@
           <p class="cs-text">I ran concept tests with three users. Five things changed before the final design.</p>
         </header>
         <div class="board compare">
-          <div><span class="chip">Before feedback</span><ul><li>The home screen looked like a profile page</li><li>Exact hex codes felt technical</li><li>Items were sorted by upload order</li><li>A temperature filter felt too rigid</li><li>“Where else do I wear this item?”</li></ul><div class="screens"><img src="../assets/images/fashion-weak/dumb-wardrobe.png" alt="Wardrobe before testing" loading="lazy"><img src="../assets/images/fashion-weak/dumb-scan.png" alt="Colour scan before testing" loading="lazy"></div></div>
-          <div><span class="chip chip--soft">After feedback</span><ul><li>Home became a daily dashboard: weather + today’s clothes</li><li>Broad colour names: Sage green, Mustard, Indigo</li><li>Wardrobe filters by item type</li><li>Outfits filter by season</li><li>Item detail shows the outfits that use it</li></ul><div class="screens"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Wardrobe after testing, filtered by item type" loading="lazy"><img src="../assets/images/fashion-weak/home.png" alt="Home after testing: daily dashboard" loading="lazy"></div></div>
+          <span class="chip compare-chip--before">Before feedback</span>
+          <ul class="compare-list compare-list--before"><li>• The home screen looked like a profile page</li><li>• Exact hex codes felt technical</li><li>• Items were sorted by upload order</li><li>• A temperature filter felt too rigid</li><li>• “Where else do I wear this item?”</li></ul>
+          <div class="cs-media compare-media compare-media--before"><div class="screens" style="--h:328px"><img src="../assets/images/fashion-weak/dumb-wardrobe.png" alt="Wardrobe before testing"><img src="../assets/images/fashion-weak/dumb-scan.png" alt="Colour scan before testing"></div></div>
+          <span class="chip chip--soft compare-chip--after">After feedback</span>
+          <ul class="compare-list compare-list--after"><li>• Home became a daily dashboard: weather + today’s clothes</li><li>• Broad colour names: Sage green, Mustard, Indigo</li><li>• Wardrobe filters by item type</li><li>• Outfits filter by season</li><li>• Item detail shows the outfits that use it</li></ul>
+          <div class="cs-media compare-media compare-media--after"><div class="screens" style="--h:328px"><img src="../assets/images/fashion-weak/wardrobe.png" alt="Wardrobe after testing, filtered by item type"><img src="../assets/images/fashion-weak/home.png" alt="Home after testing: daily dashboard"></div></div>
         </div>
       </section>
 
@@ -146,7 +154,7 @@
         </header>
         <div class="features">
           <ol><li><strong>Find your colours  →</strong>Scan your face to get a personal palette: Ivory, Olive, Petrol blue, Terracotta, Ochre…</li><li><strong>Outfits from a proven system</strong>Combinations from Sanzo Wada’s Dictionary of Color Combinations, using only items you own.</li><li><strong>Today’s clothes</strong>The home screen suggests an outfit for the Berlin weather, straight from your wardrobe.</li></ol>
-          <div class="board"><div class="screens"><img src="../assets/images/fashion-weak/palette.png" alt="Colour palette screen" loading="lazy"><img src="../assets/images/fashion-weak/outfits-summer.png" alt="Summer outfits with colour combinations" loading="lazy"><img src="../assets/images/fashion-weak/home.png" alt="Home with today’s clothes" loading="lazy"></div></div>
+          <div class="board features-board"><div class="cs-media features-media"><div class="screens" style="--h:336px"><img src="../assets/images/fashion-weak/palette.png" alt="Profile: my colour palette"><img src="../assets/images/fashion-weak/outfits-summer.png" alt="Outfits filtered by summer, with Wada colour combinations"><img src="../assets/images/fashion-weak/home.png" alt="Home: “Good morning, Jamie!”, Berlin weather and today’s clothes"></div></div></div>
         </div>
       </section>
 
@@ -175,12 +183,12 @@
       <li>Roger A. M. Santos</li>
       <li><a href="mailto:rogeramsantos@gmail.com">rogeramsantos@gmail.com</a></li>
       <li>© 2026</li>
-      <li><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></svg>Berlin</li>
+      <li class="footer-location"><img src="../assets/icons/pin.svg" width="16" height="16" alt="">Berlin</li>
     </ul>
     <ul class="footer-links">
-      <li><a href="https://www.linkedin.com/in/rogeramsantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z" fill="currentColor"/></svg></a></li>
-      <li><a href="https://github.com/rogeramsantos" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" fill="currentColor"/></svg></a></li>
-      <li><a href="mailto:rogeramsantos@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3.5 6.5 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/rogeramsantos/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/icons/linkedin.svg" width="24" height="24" alt=""></a></li>
+      <li><a href="https://github.com/rogeramsantos" target="_blank" rel="noopener" aria-label="GitHub"><img src="../assets/icons/github.png" width="24" height="24" alt=""></a></li>
+      <li><a href="mailto:rogeramsantos@gmail.com" aria-label="Email"><img src="../assets/icons/email.svg" width="24" height="24" alt=""></a></li>
     </ul>
   </footer>
 </body>
